@@ -95,7 +95,7 @@ def MoveCard(card_id, offense_id):
             }
 
             # Fetch notes for the offense_id
-            notes_url = f'https://192.168.1.59/api/siem/offenses/{offense_id}/notes'
+            notes_url = f'https://IP/api/siem/offenses/{offense_id}/notes'
             notes_response = requests.get(notes_url, auth=(qradar_username, qradar_password), verify=False)
             if notes_response.status_code == 200:
                 notes_data = notes_response.json()
